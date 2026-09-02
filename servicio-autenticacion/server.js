@@ -1,16 +1,15 @@
 const express = require('express');
-const authController = require('./controllers/authController');
-
 const app = express();
-const PORT = 3000; 
 
-// Middleware para leer formato JSON
+// Middleware para procesar datos JSON en las peticiones
 app.use(express.json());
 
-// Rutas de la evidencia
-app.post('/api/registro', authController.registrarUsuario);
-app.post('/api/login', authController.iniciarSesion);
+// Importar e integrar las rutas de autenticación
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes);
 
+// Levantar el servidor
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
