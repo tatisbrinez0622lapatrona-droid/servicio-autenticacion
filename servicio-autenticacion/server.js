@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(express.json());
 
 // Rutas de la evidencia
-app.post('/api/registrar', authController.registrarUsuario);
+app.post('/api/registro', authController.registrarUsuario);
 app.post('/api/login', authController.iniciarSesion);
 
 app.listen(PORT, () => {
