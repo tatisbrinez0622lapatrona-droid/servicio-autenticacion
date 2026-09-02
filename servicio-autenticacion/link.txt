@@ -1,3 +1,52 @@
  evidencia de servicio web de registro  e inicio de sesión. link 
 https://github.com/tatisbrinez0622lapatrona-droid/servicio-autenticacion
 
+=====================================================
+    EVIDENCIA AA5_EV01 - DISEÑO Y DESARROLLO DE SERVICIOS WEB
+=====================================================
+
+REPOSITORIO EN GITHUB:
+https://github.com/TU_USUARIO/TU_REPOSITORIO
+
+=====================================================
+    DOCUMENTACIÓN DE SERVICIOS WEB (API REST)
+=====================================================
+
+1. SERVICIO DE REGISTRO DE USUARIO
+   - Método: POST
+   - URL / Endpoint: /api/auth/register
+   - Descripción: Registra un nuevo usuario en la plataforma.
+   - Datos de entrada (JSON Body):
+     {
+       "nombre": "Usuario Ejemplo",
+       "email": "correo@ejemplo.com",
+       "password": "123"
+     }
+   - Respuesta exitosa (201 Created):
+     {
+       "success": true,
+       "message": "Usuario registrado correctamente",
+       "data": {
+         "id": 1725244800000,
+         "nombre": "Usuario Ejemplo",
+         "email": "correo@ejemplo.com"
+       }
+     }
+
+-----------------------------------------------------
+
+2. SERVICIO DE INICIO DE SESIÓN (LOGIN)
+   - Método: POST
+   - URL / Endpoint: /api/auth/login
+   - Descripción: Autentica las credenciales de un usuario.
+   - Datos de entrada (JSON Body):
+     {
+       "email": "correo@ejemplo.com",
+       "password": "123"
+     }
+   - Respuesta exitosa (200 OK):
+     {
+       "success": true,
+       "message": "Inicio de sesión exitoso",
+       "token": "jwt_token_de_ejemplo_123456"
+     }
