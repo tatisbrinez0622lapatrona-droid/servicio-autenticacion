@@ -1,0 +1,112 @@
+:root {
+    --bg-dark: #0f172a;
+    --card-dark: #1e293b;
+    --neon-blue: #38bdf8;
+    --neon-purple: #a855f7;
+    --neon-pink: #f472b6;
+    --text-white: #f8fafc;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* --- EFECTO GLOW EN LOGO --- */
+.logo-glow {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo-glow span {
+    color: var(--neon-purple);
+    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple);
+}
+
+/* --- EFECTO GO EN LOGO --- */
+.logo-go:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: #fff; text-decoration: none; font-weight: 500; }
+
+/* --- GRID Y TARJETAS --- */
+.container { padding: 50px 5%; }
+.main-title { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--card-dark);
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid transparent;
+    transition: 0.4s; /* GO: Transición suave */
+}
+
+/* GLOW & GO EN TARJETAS */
+.card-glow:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+.card-go:hover {
+    transform: translateY(-12px);
+}
+
+.product-img { position: relative; border-radius: 15px; overflow: hidden; }
+.product-img img { width: 100%; height: 300px; object-fit: cover; transition: 0.5s; }
+.product-card:hover img { transform: scale(1.1); }
+
+/* --- BOTONES GLOW --- */
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-glow-blue {
+    background: transparent;
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.btn-glow-blue:hover {
+    background: var(--neon-blue);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 15px var(--neon-pink);
+}
